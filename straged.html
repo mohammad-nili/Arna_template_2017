@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body,html{
+            background-color: #110b06;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #click{
+            background-image: url('../navScroll/images/swipe.svg');
+            background-repeat: no-repeat;
+            height: 10%;
+            width: 50%;
+            padding: 15px;
+            margin: 200px 110px;
+            text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            display: inline;
+            color: rgba(255,243,205,0.72);
+            cursor: move;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+        }
+
+
+    </style>
+
+        <link type="text/css" rel="stylesheet" href="rollerblade.css" />
+
+</head>
+<body>
+
+<div style="background-color: rgb(229,238,197);position: relative;width: 500px;height: 600px">
+    <div style="width: 100%;height: 500px;position: relative;background-color: black">
+
+        <!--first (swiper)-->
+
+        <div id="target" style="width: 100%;height: 500px;position: absolute">
+            <img id="image" class="rollerblade-img" src="../navScroll/images/spiners/Third-Spin/0.png" height="100%" style="background-color: #000000;position: absolute" title="object1">
+            <div id="fs-img-button" style="position: absolute;background-image: url('../navScroll/images/resize.svg');width: 30px;height: 30px;margin: 10px;right: 0;cursor: nesw-resize;background-repeat: no-repeat" title="resize"></div>
+            <div  style="position: absolute;background-image: url('../navScroll/images/3d.svg');width: 30px;height: 30px;margin: 10px;right: 0;bottom: 0;background-repeat: no-repeat" title="3d object1"></div>
+            <div id="click" >Drag To Spin</div>
+        </div>
+        <!--end first (swiper)-->
+
+        <!--second to end simple images-->
+
+        <div id="simple-images" style="width: 100%;height: 500px;position: absolute;display: none">
+            <img src="images/wood.jpg" alt="">
+        </div>
+        <!-- end second to end simple images-->
+    </div>
+    <div style="background-color: #7d0000;height: 100px">
+        <img style="width: 100px;height: 100px;background-image: url('images/wood.jpg');background-size: cover;display: inline-block" onclick="func1()">
+        <img style="width: 100px;height: 100px;background-image: url('images/jelew.jpg');background-size: cover;display: inline-block" onclick="func1()">
+        <img style="width: 100px;height: 100px;background-image: url('images/jelew.jpg');background-size: cover;display: inline-block" onclick="func1()">
+        <img style="width: 100px;height: 100px;background-image: url('images/jelew.jpg');background-size: cover;display: inline-block" onclick="func1()">
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="rollerblade.js"></script>
+
+
+    <script>
+
+        function func1() {
+
+            document.getElementById("image").style.display="none";
+            document.getElementById("target").style.display="none";
+            document.getElementById("simple-images").style.display="block";
+
+        }
+
+
+    </script>
+
+
+<script>
+
+
+
+    $(document).ready(function(){
+
+
+
+
+        var arrayOfImages = [];
+
+        for(i = 0; i < 10; i++) {
+            arrayOfImages.push("../navScroll/images/spiners/Third-Spin/" + i + ".png");
+        }
+
+        console.log(arrayOfImages);
+
+        $("#target").rollerblade({
+            imageArray: arrayOfImages,
+            sensitivity: 5,
+            drag: true,
+            auto: false,
+            edgeStop: false
+        })
+
+
+        .click(function(){
+
+            $("#click").css("display","none");
+
+        });
+
+    });
+
+</script>
+
+
+    <script>
+        document.getElementById("target").requestFullscreen();
+    </script>
+
+<script src="../fullscreen-api-demo/js/index.js"></script>
+
+
+</body>
+</html>

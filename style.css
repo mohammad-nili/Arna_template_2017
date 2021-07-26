@@ -1,0 +1,82 @@
+html, body, div, h3, p ,h1{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(Quicksand-Light.otf);
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+.container {
+    max-width: 100%;
+    margin: 0 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+#First-Spin, #Second-Spin, #Third-Spin {
+    position: relative;
+    width: 38.20%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.side-text {
+    width: 61.80%;
+    font-weight: bold;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:800px) {
+
+    .row {
+        flex-direction: column;
+        /*margin-bottom: 15%;*/
+        height: 100%;
+    }
+
+    .row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    #Second-Spin, .side-text, #First-Spin, #Third-Spin {
+        width: 100%;
+        text-align: justify;
+
+    }
+
+    #Second-Spin, #First-Spin, #Third-Spin {
+        max-width: 480px;
+    }
+
+    canvas {
+        position: static;
+    }
+}
+
+.side-text h1{
+    padding: 30px;
+    text-align: justify;
+    direction: rtl;
+    color: #a48721;
+    font-size: 40px;
+}
+
+.side-text p {
+    padding: 10px 30px;
+    line-height: 26px;
+    color: #cdcdcd;
+}

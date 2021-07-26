@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        html ,body{
+            margin:0;
+            padding: 0;
+        }
+
+        .snip1573 {
+            border: solid 1px #614a00;
+            background-repeat: no-repeat;
+            background-position:  center;
+            background-size: cover;
+            background-color: #000;
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 40px #0b0b0b;
+        }
+
+        #gallery-1{
+            background-image: url('images/table.jpg');
+        }
+        #gallery-2{
+            background-image: url('images/ink.JPG');
+        }
+        #gallery-3{
+            background-image: url('images/silver.png');
+        }
+        #gallery-4{
+            background-image: url('images/jelew.jpg');
+        }
+        #gallery-5{
+            background-image: url('../navScroll/images/u.jpg');
+        }
+        #gallery-6{
+            background-image: url('images/wood.jpg');
+        }
+
+
+        .snip1573 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+        }
+
+        .snip1573:before,
+        .snip1573:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -webkit-transition: all 0.35s ease;
+            transition: all 0.35s ease;
+            background-color: #0e0e09;
+            border-left: 3px solid #d4af37;
+            border-right: 3px solid #d4af37;
+            content: '';
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .snip1573:before {
+            -webkit-transform: skew(45deg) translateX(-155%);
+            transform: skew(45deg) translateX(-155%);
+        }
+
+        .snip1573:after {
+            -webkit-transform: skew(45deg) translateX(155%);
+            transform: skew(45deg) translateX(155%);
+        }
+
+        .snip1573 img {
+            backface-visibility: hidden;
+            max-width: 100%;
+            vertical-align: top;
+        }
+
+        .snip1573 figcaption {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            z-index: 2;
+            -webkit-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+            -webkit-box-shadow: 0 0 10px #000000;
+            box-shadow: 0 0 10px #000000;
+        }
+
+        .snip1573 h3 {
+            background-color: #000000;
+            border: 2px solid #FFD134;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 5px 10px;
+            text-transform: uppercase;
+        }
+
+        .snip1573 a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .snip1573:hover > img,
+        .snip1573.hover > img {
+            opacity: 0.5;
+        }
+
+        .snip1573:hover:before,
+        .snip1573.hover:before {
+            -webkit-transform: skew(45deg) translateX(-55%);
+            transform: skew(45deg) translateX(-55%);
+        }
+
+        .snip1573:hover:after,
+        .snip1573.hover:after {
+            -webkit-transform: skew(45deg) translateX(55%);
+            transform: skew(45deg) translateX(55%);
+        }
+
+        .snip1573:hover figcaption,
+        .snip1573.hover figcaption {
+            -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+
+        /* Demo purposes only */
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div style=" background-color: #212121;text-align: center;">
+    <figure class="snip1573" id="gallery-1">
+        <figcaption>
+            <h3>تابلو</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573" id="gallery-2">
+        <figcaption>
+            <h3>خط</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573" id="gallery-3">
+        <figcaption>
+            <h3>نقره</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573" id="gallery-4">
+        <figcaption>
+            <h3>جواهر</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573" id="gallery-5">
+        <figcaption>
+            <h3>باکارات</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+    <figure class="snip1573" id="gallery-6">
+        <figcaption>
+            <h3>چوب</h3>
+        </figcaption>
+        <a href="#"></a>
+    </figure>
+
+</div>
+
+<script>
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        }
+    );
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</body>
+</html>
