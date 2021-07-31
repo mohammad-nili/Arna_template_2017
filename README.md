@@ -4,8 +4,8 @@
 
 
 # Features :
-- responsive website
 - 3D pics (for online helth check)
+- Responsive website
 - Telegram management (Webhooks) [@arnagallerybot](https://t.me/arnagallerybot)
 - Instagram management (by Api)
 - Online shipping [ in progress ] 
